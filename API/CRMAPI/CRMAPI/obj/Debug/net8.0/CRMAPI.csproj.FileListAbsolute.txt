@@ -30,3 +30,4 @@ C:\Users\kkacp\Desktop\CRM-EM\API\CRMAPI\CRMAPI\obj\Debug\net8.0\refint\CRMAPI.d
 C:\Users\kkacp\Desktop\CRM-EM\API\CRMAPI\CRMAPI\obj\Debug\net8.0\CRMAPI.pdb
 C:\Users\kkacp\Desktop\CRM-EM\API\CRMAPI\CRMAPI\obj\Debug\net8.0\CRMAPI.genruntimeconfig.cache
 C:\Users\kkacp\Desktop\CRM-EM\API\CRMAPI\CRMAPI\obj\Debug\net8.0\ref\CRMAPI.dll
+C:\Users\kkacp\Desktop\CRM-EM\API\CRMAPI\CRMAPI\obj\Debug\net8.0\CRMAPI.sourcelink.json
