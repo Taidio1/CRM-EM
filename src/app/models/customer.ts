@@ -1,7 +1,7 @@
 export class Customer {
     id? : number;
     name = "";
-    ststus? : string;
+    status? : string;
     celPobytu ?: string;
     podLegPob ?: string;
     krajPoch? : string;
