@@ -12,7 +12,7 @@
       <div class="card shadow">
         <div class="card-header border-0">
           <h3 class="mb-0">Klienci 👨‍👩‍👦‍👦</h3>
-  <button (click)="openPopup()">Otwórz popup</button>
+          <button (click)="openPopup()">Otwórz popup</button>
 
         </div>
         <div class="table-responsive">
@@ -38,7 +38,7 @@
                 </th>
                 <td>
                   <span class="badge badge-dot mr-4">
-                    <i class="bg-warning"></i> Zakończona
+                    <i class="bg-warning"></i> {{ customer.status}}
                   </span>
                 </td>
                 <td>
