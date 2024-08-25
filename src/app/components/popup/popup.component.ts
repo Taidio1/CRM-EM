@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Customer } from 'src/app/models/customer';
 
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
   styleUrls: ['./popup.component.scss']
 })
-export class PopupComponent implements OnInit {
+export class PopupComponent {
 
-  constructor() { }
+  customer: Customer;
 
-  ngOnInit(): void {
-  }
-
-  closePopup(): void {
-    // tutaj dodasz kod do zamknięcia popup
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Customer) {
+    this.customer = data;
   }
 
 }

@@ -9,6 +9,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'argon-dashboard-angular';
+  title = 'dashboard-angular';
 
 }
