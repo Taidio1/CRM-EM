@@ -5,7 +5,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   imports: [
@@ -17,7 +16,6 @@ import { PopupComponent } from './popup/popup.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    PopupComponent
   ],
   exports: [
     FooterComponent,

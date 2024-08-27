@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { Customer } from 'src/app/models/customer';
 import { CustomerService } from 'src/app/services/customer.service';
 import { MatDialog } from '@angular/material/dialog';
-import { PopupComponent } from 'src/app/components/popup/popup.component';
 
 
 @Component({
@@ -14,7 +13,6 @@ import { PopupComponent } from 'src/app/components/popup/popup.component';
 })
 export class TablesComponent {
 
-  popupComponent: PopupComponent;
   customers: Customer[] = [];
 
   constructor(private customerServices: CustomerService, private dialogRef : MatDialog) {}
