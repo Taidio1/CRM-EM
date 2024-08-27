@@ -119,28 +119,28 @@
           </table>
         </div>
         <div class="card-footer py-4">
-          <nav aria-label="...">
+          <nav aria-label="Page navigation">
+            <select class="dropdown-center" [(ngModel)]="pageSize" (ngModelChange)="changePageSize($event)">
+              <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+            </select>
             <ul class="pagination justify-content-end mb-0">
-              <li class="page-item disabled">
-                <a class="page-link" href="javascript:void(0)" tabindex="-1">
+              <li [class.disabled]="currentPage === 1">
+                <a class="page-link" (click)="previousPage()">
                   <i class="fas fa-angle-left"></i>
                   <span class="sr-only">Previous</span>
                 </a>
               </li>
-              <li class="page-item active">
-                <a class="page-link" href="javascript:void(0)">1</a>
+              <li *ngFor="let page of pages" [class.active]="page === currentPage">
+                <a class="page-link" (click)="currentPage = page">{{ page }}</a>
               </li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="javascript:void(0)">
+              <li [class.disabled]="currentPage === totalPages">
+                <a class="page-link" (click)="nextPage()">
                   <i class="fas fa-angle-right"></i>
                   <span class="sr-only">Next</span>
                 </a>
               </li>
             </ul>
+            <span class="pagination-center">{{ currentPage }} of {{ totalPages }}</span>
           </nav>
         </div>
       </div>
