@@ -4,6 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import { Customer } from 'src/app/models/customer';
 import { CustomerService } from 'src/app/services/customer.service';
 import { MatDialog } from '@angular/material/dialog';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-detail.component';
+
 
 
 @Component({
@@ -15,12 +18,17 @@ export class TablesComponent {
 
   customers: Customer[] = [];
 
-  constructor(private customerServices: CustomerService, private dialogRef : MatDialog) {}
+  constructor(private customerServices: CustomerService, private modalService: NgbModal) {}
 
   ngOnInit(): void{
     this.customerServices
     .getCustomer()
     .subscribe((result: Customer[]) => (this.customers = result));
+  }
+
+  openDetails(customer: any): void {
+    const modalRef = this.modalService.open(PopupDetailComponent, { size: 'lg' });
+    modalRef.componentInstance.customer = customer;
   }
 
 }

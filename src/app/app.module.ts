@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { MatDialogModule} from '@angular/material/dialog';
+import { PopupDetailComponent } from './components/popup-detail/popup-detail.component';
 
 
 @NgModule({
@@ -31,8 +32,9 @@ import { MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
+    PopupDetailComponent
   ],
-  providers: [],
+  providers: [NgbModal],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
