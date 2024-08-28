@@ -9,6 +9,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -26,15 +27,16 @@ import { PopupDetailComponent } from './components/popup-detail/popup-detail.com
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    PopupDetailComponent
+    PopupDetailComponent,
   ],
-  providers: [NgbModal],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
