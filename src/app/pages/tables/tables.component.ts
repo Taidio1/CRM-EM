@@ -23,20 +23,22 @@ export class TablesComponent {
    * Tablica przechowująca dane klientów.
    */
   customers: Customer[] = [];
-
-  /**
-   * Konstruktor komponentu.
-   * @param customerServices Serwis odpowiedzialny za pobieranie danych klientów.
-   * @param modalService Serwis odpowiedzialny za wyświetlanie okien modalnych.
-   */
-  constructor(private customerServices: CustomerService, private modalService: NgbModal) { }
+  allCustomers: Customer[] = [];
+  selectedStatus: string = ''; // store the selected status
 
   public pageSize = 20; // Domyślna ilość pozycji do wyświetlenia
   public pageSizes = [20, 40, 60, 100];
   public currentPage = 1; // Aktualna strona
   public totalPages: number; // Łączna liczba stron
   public pages: number[] = [];
+ 
 
+   /**
+   * Konstruktor komponentu.
+   * @param customerServices Serwis odpowiedzialny za pobieranie danych klientów.
+   * @param modalService Serwis odpowiedzialny za wyświetlanie okien modalnych.
+   */
+  constructor(private customerServices: CustomerService, private modalService: NgbModal) { }
   /**
    * Metoda wywoływana po zainicjowaniu komponentu.
    * Pobiera dane klientów z serwisu i przypisuje je do tablicy customers.
@@ -45,10 +47,23 @@ export class TablesComponent {
     this.customerServices
       .getCustomer()
       .subscribe((result: Customer[]) => {
+        this.allCustomers = result;
         this.customers = result.slice(0, this.pageSize); // Pobierz tylko pierwsze 'pageSize' pozycji
         this.totalPages = Math.ceil(result.length / this.pageSize); // Oblicz łączną liczbę stron
       });
       this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
+  }
+
+  onStatusChange(status: string): void {
+    this.selectedStatus = status;
+    this.filterCustomers();
+  }
+
+  filterCustomers(): void {
+    this.customers = this.allCustomers.filter(customer => customer.status === this.selectedStatus);
+    this.currentPage = 1; // Reset current page to 1
+    this.totalPages = Math.ceil(this.customers.length / this.pageSize); // Recalculate total pages
+    this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 
    // Funkcja do zmiany ilości pozycji do wyświetlenia
@@ -81,6 +96,10 @@ export class TablesComponent {
         this.customers = customers.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize);
       });
     }
+  }
+
+  isActivePage(page: any): boolean {
+    return page === this.currentPage;
   }
 
   /**
