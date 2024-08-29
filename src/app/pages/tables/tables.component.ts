@@ -19,6 +19,8 @@ import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-deta
 })
 export class TablesComponent {
 
+  displayedColumns: string[] = ['IMIĘ I NAZWISKO', 'STATUS', 'CEL POBYTU	', 'NR SPRAWY	','DATA ZAK. POB'];
+  clickedRows = new Set<Customer>();
   /**
    * Tablica przechowująca dane klientów.
    */
@@ -61,6 +63,9 @@ export class TablesComponent {
 
   filterCustomers(): void {
     this.customers = this.allCustomers.filter(customer => customer.status === this.selectedStatus);
+    if(this.selectedStatus === ""){
+      this.customers = this.allCustomers
+    }
     this.currentPage = 1; // Reset current page to 1
     this.totalPages = Math.ceil(this.customers.length / this.pageSize); // Recalculate total pages
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);

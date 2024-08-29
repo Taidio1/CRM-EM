@@ -1,27 +1,18 @@
 <div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
   <div class="container-fluid">
     <div class="header-body">
+      <!-- Button to trigger the modal -->
+      <button type="button" class="btn btn-primary" style="margin: 0px 0px 15px 0px;" data-bs-toggle="modal"
+        data-bs-target="#myModal">
+        Dodaj Klienta
+      </button>
     </div>
   </div>
 </div>
 <!-- Page content -->
 <div class="container-fluid mt--7">
 
-  <!-- Button to trigger the modal -->
-  <button type="button" class="btn btn-primary" style="margin: 0px 0px 15px 0px;" data-bs-toggle="modal"
-    data-bs-target="#myModal">
-    Dodaj Klienta
-  </button>
-<style>
-  .modal{
-    z-index: 1100 !important;
-}
 
-.d-block{
-    z-index: 1100 !important;
-
-}
-</style>
   <!-- The modal -->
   <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -30,6 +21,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Dodaj nowego klienta</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <hr>
         <div class="modal-body">
           <form>
             <div class="form-group">
@@ -75,18 +67,21 @@
       <div class="card shadow">
         <div class="card-header border-0">
           <h3 class="mb-0">Klienci 👨‍👩‍👦‍👦</h3>
+          <hr class="hr" style="background-color: black; margin-top: 1rem !important;" />
+          <div class="filters">
+            <select style="background-color: #586bd3;
+            margin-top: 10px;
+            color: white;
+            text-align: left;" class="btn dropdown dropdown-toggle" (change)="onStatusChange($event.target.value)">
+              <option value="">Wszyscy</option>
+              <option value="Aktywny">Aktywny</option>
+              <option value="Wstrzymany">Wstrzymany</option>
+              <option value="Zakończony">Zakończony</option>
+              <option value="Nieaktywny">Nieaktywny</option>
+              <option value="Planowany">Planowany</option>
+            </select>
 
-          <select style="background-color: #586bd3;
-          margin-top: 10px;
-          color: white;
-          text-align: left;" class="btn dropdown dropdown-toggle" (change)="onStatusChange($event.target.value)">
-            <option value="Aktywny">Wszyscy</option>
-            <option value="Aktywny">Aktywny</option>
-            <option value="Wstrzymany">Wstrzymany</option>
-            <option value="Zakończony">Zakończony</option>
-            <option value="Nieaktywny">Nieaktywny</option>
-            <option value="Planowany">Planowany</option>
-          </select>
+          </div>
         </div>
         <div class="table-responsive">
           <table class="table align-items-center table-flush table-hover">
@@ -143,9 +138,13 @@
                   </div>
                 </td>
               </tr>
-
+              <tr mat-row (click)="clickedRows.add(row)" [class.demo-row-is-clicked]="clickedRows.has(row)"
+                *matRowDef="let row; columns: displayedColumns;"></tr>
             </tbody>
           </table>
+
+
+
         </div>
         <div class="card-footer py-4">
           <nav aria-label="...">
@@ -175,3 +174,4 @@
       </div>
     </div>
   </div>
+</div>
