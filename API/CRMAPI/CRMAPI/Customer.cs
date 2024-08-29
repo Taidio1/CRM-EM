@@ -17,7 +17,6 @@ namespace CRMAPI
     public string? Email { get; set; }
     public DateOnly? DataUro { get; set; }
     public string? Notes { get; set; }
-    public string? Creator { get; set; }
     public decimal? TotalSpend { get; set; }
     public string? NumerSprawy { get; set; }
     public string? Inspektor { get; set; }

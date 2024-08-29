@@ -14,4 +14,9 @@ export class CustomerService {
   public getCustomer() : Observable<Customer[]> {
     return this.http.get<Customer[]>(`${environment.apiUrl}/${this.url}`);
   }
+
+  getCustomersForMonth(month: string): Observable<Customer[]> {
+    return this.http.get<Customer[]>(`${environment.apiUrl }?month=${month}`);
+  }
+
 }
