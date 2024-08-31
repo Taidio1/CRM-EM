@@ -123,5 +123,5 @@ export class TablesComponent {
   addCustomerPopup(): void {
     this.modalService.open(PopupAddComponent, { size: 'lg' });
   }
-
+  
 }

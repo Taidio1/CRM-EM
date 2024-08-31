@@ -2,7 +2,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">Dodaj nowego klienta</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" (click)="closeAddCustomerPopup()" data-bs-dismiss="modal"></button>
         </div>
         <hr>
         <div class="modal-body">
@@ -38,7 +38,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeAddCustomerPopup()">Anuluj</button>
           <button type="button" class="btn btn-primary">Zapisz</button>
         </div>
       </div>
