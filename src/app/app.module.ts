@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { MatDialogModule} from '@angular/material/dialog';
 import { PopupDetailComponent } from './components/popup-detail/popup-detail.component';
+import { PopupAddComponent } from './components/popup-add/popup-add.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { PopupDetailComponent } from './components/popup-detail/popup-detail.com
     AdminLayoutComponent,
     AuthLayoutComponent,
     PopupDetailComponent,
+    PopupAddComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

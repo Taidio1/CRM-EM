@@ -6,6 +6,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 import { MatDialog } from '@angular/material/dialog';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-detail.component';
+import { PopupAddComponent } from 'src/app/components/popup-add/popup-add.component';
 
 
 
@@ -16,7 +17,7 @@ import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-deta
   selector: 'app-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class TablesComponent {
 
@@ -118,6 +119,9 @@ export class TablesComponent {
   openDetails(customer: any): void {
     const modalRef = this.modalService.open(PopupDetailComponent, { size: 'lg' });
     modalRef.componentInstance.customer = customer;
+  }
+  addCustomerPopup(): void {
+    this.modalService.open(PopupAddComponent, { size: 'lg' });
   }
 
 }
