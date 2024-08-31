@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
 import { Customer } from 'src/app/models/customer';
+import { CusStatChar } from 'src/app/models/cusStatChar';
 import { CustomerService } from 'src/app/services/customer.service';
 import {Moment} from 'moment';
 
@@ -52,12 +53,11 @@ export class DashboardComponent implements OnInit {
       //Chart - Status
       this.customerService
       .getCustomerStats()
-      .subscribe((result: any[]) => {
+      .subscribe((result: CusStatChar[]) => {
         const labels = result.map(el=> el.purpose)
         const counts = result.map(el=> el.count)
         this.chartsStatsData.labels = labels 
         this.chartsStatsData.datasets[0].data = counts
-        console.log(this.chartsStatsData);
       });
 
     this.datasets = [
@@ -66,7 +66,7 @@ export class DashboardComponent implements OnInit {
     ];
     this.data = this.datasets[0];
 
-    var chartOrders = document.getElementById('chart-orders');
+    const chartOrders = document.getElementById('chart-orders');
 
     parseOptions(Chart, chartOptions());
 
@@ -76,7 +76,7 @@ export class DashboardComponent implements OnInit {
       data: this.chartsStatsData
     });
 
-    var chartSales = document.getElementById('chart-sales');
+    const chartSales = document.getElementById('chart-sales');
 
     this.salesChart = new Chart(chartSales, {
       type: 'line',

@@ -16,6 +16,7 @@ import { ComponentsModule } from './components/components.module';
 import { MatDialogModule} from '@angular/material/dialog';
 import { PopupDetailComponent } from './components/popup-detail/popup-detail.component';
 import { PopupAddComponent } from './components/popup-add/popup-add.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { PopupAddComponent } from './components/popup-add/popup-add.component';
     AuthLayoutComponent,
     PopupDetailComponent,
     PopupAddComponent,
+    SearchPipe,
   ],
   providers: [],
   bootstrap: [AppComponent]
