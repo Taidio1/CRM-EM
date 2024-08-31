@@ -22,5 +22,24 @@ namespace CRMAPI.Controllers
     {
       return Ok(await _context.Customers.ToListAsync());
     }
+
+
+
+
+
+    [HttpGet("api/customer-purpose-stats")]
+    public IActionResult GetCustomerPurposeStats()
+    {
+      var purposeCounts = _context.Customers
+          .GroupBy(c => c.CelPobytu)
+          .Select(g => new
+          {
+            Purpose = g.Key,
+            Count = g.Count()
+          })
+          .ToList();
+
+      return Ok(purposeCounts);
+    }
   }
 }

@@ -43,8 +43,7 @@
               "ViewState": "AgIAAAoAAAAAAAAAAAAqwBMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T11:26:01.134Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -54,7 +53,7 @@
               "RelativeDocumentMoniker": "CRMAPI\\Controllers\\CustomerController.cs",
               "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "CRMAPI\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwCkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T20:07:15.163Z",
               "IsPinned": true,
@@ -114,8 +113,7 @@
               "RelativeToolTip": "CRMAPI\\Data\\DataContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T20:21:38.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-15T20:21:38.64Z"
             }
           ]
         }

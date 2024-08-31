@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Customer } from 'src/app/models/customer';
@@ -15,12 +15,16 @@ import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-deta
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.scss']
+  styleUrls: ['./tables.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TablesComponent {
 
   displayedColumns: string[] = ['IMIĘ I NAZWISKO', 'STATUS', 'CEL POBYTU	', 'NR SPRAWY	','DATA ZAK. POB'];
   clickedRows = new Set<Customer>();
+
+  
+
   /**
    * Tablica przechowująca dane klientów.
    */

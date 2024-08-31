@@ -11,7 +11,6 @@ import {
   chartExample1,
   chartExample2
 } from "../../variables/charts";
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-dashboard',
@@ -27,6 +26,17 @@ export class DashboardComponent implements OnInit {
   public salesChart;
   public clicked: boolean = true;
   public clicked1: boolean = false;
+  public customerStats: any;
+  public chartsStatsData = {
+    labels: [],
+    datasets: [
+      {
+        label: "Status",
+        data: [],
+        maxBarThickness: 10
+      }
+    ]
+  }
   
   customers: Customer[] = [];
   previousMonthCustomers: number;
@@ -37,6 +47,17 @@ export class DashboardComponent implements OnInit {
       .getCustomer()
       .subscribe((result: Customer[]) => {
         this.customers = result;
+      });
+
+      //Chart - Status
+      this.customerService
+      .getCustomerStats()
+      .subscribe((result: any[]) => {
+        const labels = result.map(el=> el.purpose)
+        const counts = result.map(el=> el.count)
+        this.chartsStatsData.labels = labels 
+        this.chartsStatsData.datasets[0].data = counts
+        console.log(this.chartsStatsData);
       });
 
     this.datasets = [
@@ -52,7 +73,7 @@ export class DashboardComponent implements OnInit {
     var ordersChart = new Chart(chartOrders, {
       type: 'bar',
       options: chartExample2.options,
-      data: chartExample2.data
+      data: this.chartsStatsData
     });
 
     var chartSales = document.getElementById('chart-sales');

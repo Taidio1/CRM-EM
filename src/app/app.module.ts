@@ -28,7 +28,7 @@ import { PopupDetailComponent } from './components/popup-detail/popup-detail.com
     AppRoutingModule,
     HttpClientModule,
     MatDialogModule,
-    BrowserModule
+    BrowserModule,
   ],
   declarations: [
     AppComponent,

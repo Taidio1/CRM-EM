@@ -20,6 +20,16 @@
     ]
   },
   {
+    "ContainingType": "CRMAPI.Controllers.CustomerController",
+    "Method": "GetCustomerPurposeStats",
+    "RelativePath": "api/Customer/api/customer-purpose-stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CRMAPI.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
