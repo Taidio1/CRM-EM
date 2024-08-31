@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Customer } from 'src/app/models/customer';
 import { CustomerService } from 'src/app/services/customer.service';
 
@@ -20,15 +20,55 @@ export class PopupDetailComponent implements OnInit  {
   }
 
 
-  updateHero(customer: Customer) {
-    this.customerService
-      .updateHero(customer)
-      .subscribe((customers: Customer[]) => this.heroesUpdated.emit(customers));
-    this.modalService.dismissAll();
+  updateCustomer(customer: Customer) {
+    const confirmModal = this.modalService.open(ConfirmModalComponent, { size: 'sm' });
+    confirmModal.componentInstance.message = 'Czy na pewno chcesz zapisać zmiany?';
+    confirmModal.result.then((result) => {
+      if (result) {
+        this.customerService
+          .updateHero(customer)
+          .subscribe((customers: Customer[]) => this.heroesUpdated.emit(customers));
+        this.modalService.dismissAll();
+      }
+    });
   }
 
 
   dismiss(): void {
     this.modalService.dismissAll();
+  }
+}
+
+
+// nowy komponent modalny do potwierdzenia
+@Component({
+  selector: 'app-confirm-modal',
+  template: `
+    <div class="modal-header">
+      <h5 class="modal-title">Potwierdzenie</h5>
+      <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>{{ message }}</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="dismiss()">Anuluj</button>
+      <button type="button" class="btn btn-primary" (click)="confirm()">Tak</button>
+    </div>
+  `,
+})
+export class ConfirmModalComponent {
+  @Input() message: string;
+
+  constructor(private activeModal: NgbActiveModal) { }
+
+  dismiss() {
+    this.activeModal.dismiss();
+  }
+
+  confirm() {
+    this.activeModal.close(true);
   }
 }

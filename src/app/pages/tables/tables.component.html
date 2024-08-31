@@ -18,11 +18,11 @@
           <div class="card-header border-0">
             <h3 class="mb-0">Klienci 👨‍👩‍👦‍👦</h3>
             <hr class="hr" style="background-color: black; margin-top: 1rem !important;" />
-            <div class="filters">
+            <div class="filters input-group">
               <select style="background-color: #586bd3;
-            margin-top: 10px;
-            color: white;
-            text-align: left;" class="btn dropdown dropdown-toggle" (change)="onStatusChange($event.target.value)">
+                margin-top: 10px;
+                color: white;
+                text-align: left;" class="filter btn dropdown dropdown-toggle" (change)="onStatusChange($event.target.value)">
                 <option value="">Wszyscy</option>
                 <option value="Aktywny">Aktywny</option>
                 <option value="Wstrzymany">Wstrzymany</option>
@@ -31,7 +31,7 @@
                 <option value="Planowany">Planowany</option>
               </select>
 
-              <input class="form-control" type="text" placeholder="Szukaj" [(ngModel)]="searchText">
+              <input class="filter search btn form-control-label" type="text" placeholder="Szukaj" [(ngModel)]="searchText">
             </div>
           </div>
           <div class="table-responsive">
