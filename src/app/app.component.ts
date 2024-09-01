@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Mode } from './components/mode-toggle-btn/mode-toggle/mode-toggle.model';
+import { ModeToggleService } from './components/mode-toggle-btn/mode-toggle/mode-toggle.service';
 
 
 @Component({
@@ -10,5 +12,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'dashboard-angular';
-
+  currentMode: Mode = Mode.LIGHT;
+  constructor(private modeToggleService: ModeToggleService) {
+    /**
+     * Example code that demonstrate the modeChanged$ observable behavior and usage
+     */
+    this.modeToggleService.modeChanged$.subscribe((mode: Mode) => {
+      this.currentMode = mode;
+    });
+  }
 }

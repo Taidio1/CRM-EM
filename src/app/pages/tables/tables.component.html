@@ -59,8 +59,8 @@
                     <span class="badge badge-dot mr-4">
                       <i [ngClass]="{
                       'bg-success': customer.status === 'Aktywny',
-                      'bg-blue': customer.status === 'W trakcie',
-                      'bg-info': customer.status === 'Wstrzymany',
+                      'bg-info': customer.status === 'W trakcie',
+                      'bg-gradient-danger': customer.status === 'Wstrzymany',
                       'bg-warning': customer.status === 'Zakończony',
                       'bg-red': customer.status === 'Nieaktywny',
                       'bg-blue': customer.status === 'Planowany'

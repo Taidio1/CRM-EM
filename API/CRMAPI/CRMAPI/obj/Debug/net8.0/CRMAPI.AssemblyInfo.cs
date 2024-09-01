@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+131d4a0b79f5e1fc586e303c149e5be1cd76ef05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+182705b4b5e4b466d6286cd9ae0a3fa1ea3c2452")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

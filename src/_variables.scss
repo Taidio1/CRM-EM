@@ -1,0 +1,39 @@
+
+// Light Mode:
+// Text #101619
+// bg #F8FBFC
+// prim #1E5067
+// sec #6BBDE6
+// acc #0F8AC2
+
+// Dark Mode:
+// Text #E6ECEF
+// bg #030607
+// prim #98CAE1
+// sec #196B94
+// acc #3DB7F0
+
+
+
+$bgColor_light: #F8FBFC;
+$bgColor_dark: #030607;
+
+$textColor_light: black;
+$textColor_dark: white;
+
+$borderColor_light: black;
+$borderColor_dark: white;
+
+// mixin that enables css variables in light mode
+@mixin lighten() {
+  --bgColor: #{$bgColor_light};
+  --textColor: #{$textColor_light};
+  --borderColor: #{$borderColor_light};
+}
+
+// mixin that enables css variables in dark mode
+@mixin darken() {
+  --bgColor: #{$bgColor_dark};
+  --textColor: #{$textColor_dark};
+  --borderColor: #{$borderColor_dark};
+}

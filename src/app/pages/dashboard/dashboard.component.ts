@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
 import { Customer } from 'src/app/models/customer';
 import { CusStatChar } from 'src/app/models/cusStatChar';
@@ -20,7 +20,7 @@ import {
 })
 
 export class DashboardComponent implements OnInit {
-  constructor(private customerService: CustomerService){}
+  constructor(private customerService: CustomerService,  private cdr: ChangeDetectorRef){}
 
   public datasets: any;
   public data: any;

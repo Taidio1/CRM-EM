@@ -38,7 +38,7 @@ export class CustomerService {
 
 
   public getCustomerStats(): Observable<any[]> {
-    return this.http.get<any[]>(`${environment.apiUrl}/${this.url}/api/customer-purpose-stats`);
+    return this.http.get<any[]>(`${environment.apiUrl}/${this.url}/customer-purpose-stats`);
   }
 
 }

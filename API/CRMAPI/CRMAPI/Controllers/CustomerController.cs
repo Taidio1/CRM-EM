@@ -79,7 +79,7 @@ namespace CRMAPI.Controllers
 
 
 
-    [HttpGet("api/customer-purpose-stats")]
+    [HttpGet("customer-purpose-stats")]
     public IActionResult GetCustomerPurposeStats()
     {
       var purposeCounts = _context.Customers

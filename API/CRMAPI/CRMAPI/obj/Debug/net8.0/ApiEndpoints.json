@@ -100,7 +100,7 @@
   {
     "ContainingType": "CRMAPI.Controllers.CustomerController",
     "Method": "GetCustomerPurposeStats",
-    "RelativePath": "api/Customer/api/customer-purpose-stats",
+    "RelativePath": "api/Customer/customer-purpose-stats",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

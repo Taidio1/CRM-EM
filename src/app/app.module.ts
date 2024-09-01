@@ -16,7 +16,7 @@ import { ComponentsModule } from './components/components.module';
 import { MatDialogModule} from '@angular/material/dialog';
 import { PopupDetailComponent } from './components/popup-detail/popup-detail.component';
 import { PopupAddComponent } from './components/popup-add/popup-add.component';
-
+import { LibModule } from "./components/mode-toggle-btn/lib.module";
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import { PopupAddComponent } from './components/popup-add/popup-add.component';
     HttpClientModule,
     MatDialogModule,
     BrowserModule,
+    LibModule
   ],
   declarations: [
     AppComponent,
