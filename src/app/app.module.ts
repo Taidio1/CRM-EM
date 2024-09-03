@@ -17,6 +17,7 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { PopupDetailComponent } from './components/popup-detail/popup-detail.component';
 import { PopupAddComponent } from './components/popup-add/popup-add.component';
 import { LibModule } from "./components/mode-toggle-btn/lib.module";
+import { PopupEditComponent } from './components/popup-edit/popup-edit.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { LibModule } from "./components/mode-toggle-btn/lib.module";
     AuthLayoutComponent,
     PopupDetailComponent,
     PopupAddComponent,
+    PopupEditComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

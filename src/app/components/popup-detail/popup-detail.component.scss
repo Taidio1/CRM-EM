@@ -2,3 +2,25 @@
     color: black !important;
     font-weight: 600 !important;
 }
+
+.head-detail{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.head-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.checklist label{
+    margin-left: 10px;
+}
+
+.doc{
+    display: flex;
+    flex-direction: column;
+}
