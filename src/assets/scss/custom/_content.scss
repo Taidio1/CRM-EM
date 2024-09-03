@@ -7,12 +7,14 @@
     .navbar-top {
         position: absolute;
         left: 0;
-        top: 0;
-        width: 100%;
+        top: 10px;
+        border-radius: 10px;
+        width: 99.5%;
         z-index: 1;
         background-color: transparent;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        background: linear-gradient(87deg, #1D8AC9 0, #A47A19 100%) !important;
     }
 
     // Container

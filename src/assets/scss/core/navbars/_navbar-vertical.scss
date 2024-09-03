@@ -168,9 +168,12 @@
                     top: 0;
                     bottom: 0;
                     width: 100%;
+                    max-width: 230px !important;
                     max-width: $navbar-vertical-width;
                     padding-left: $navbar-vertical-padding-x;
                     padding-right: $navbar-vertical-padding-x;
+                    margin: 10px 10px 10px 10px !important;
+                    border-radius: 10px !important;
 
                     overflow-y: auto;
 

@@ -15,8 +15,10 @@
 
 
 
-$bgColor_light: #F8FBFC;
-$bgColor_dark: #030607;
+$bgColor_light: #EDEEF4;
+$bgColor_dark: #1e1e2f;
+$bgComColor_light: #FFF;
+$bgComColor_dark: #212E55;
 
 $textColor_light: black;
 $textColor_dark: white;
@@ -27,6 +29,7 @@ $borderColor_dark: white;
 // mixin that enables css variables in light mode
 @mixin lighten() {
   --bgColor: #{$bgColor_light};
+  --comColor: #{$bgComColor_light};
   --textColor: #{$textColor_light};
   --borderColor: #{$borderColor_light};
 }
@@ -34,6 +37,7 @@ $borderColor_dark: white;
 // mixin that enables css variables in dark mode
 @mixin darken() {
   --bgColor: #{$bgColor_dark};
+  --comColor: #{$bgComColor_dark};
   --textColor: #{$textColor_dark};
   --borderColor: #{$borderColor_dark};
 }

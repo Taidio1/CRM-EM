@@ -1,3 +1,12 @@
 .bg-white{
-    background-color: var(--bgColor) !important;
+    background-color: var(--comColor) !important;
+    
+}
+
+body{
+    background-color: var(-textColor) !important;
+}
+
+.navbar-nav ul li a{
+    color: var(--comColor) !important;
 }
