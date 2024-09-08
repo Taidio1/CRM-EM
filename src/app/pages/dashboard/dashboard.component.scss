@@ -4,5 +4,14 @@
 
 }
 
-.bg-grad{
+.mb-0,
+.text-muted{
+    color: var(--textColor) !important;
 }
+.card-header,
+.card-body{
+    background-color: var(--comColor) !important;
+}
+
+
+

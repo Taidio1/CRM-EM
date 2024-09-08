@@ -1,5 +1,5 @@
 .bg-white{
-    background-color: var(--comColor) !important;
+    background-color: #19222c;
     
 }
 
@@ -7,6 +7,21 @@ body{
     background-color: var(-textColor) !important;
 }
 
-.navbar-nav ul li a{
-    color: var(--comColor) !important;
+.navbar-nav li a{
+    color: var(--textColor) !important;
+}
+
+.navbar-vertical{
+    box-shadow: none !important;
+}
+
+.navbar-vertical.navbar-expand-md{
+    padding-left: 0.5rem !important;
+    margin: -6px 0px 0px 10px !important;
+}
+
+.navbar-vertical.navbar-expand-md > [class*=container]{
+    padding-left: 23px;
+    background-color: var(--comColor) !important;
+    border-radius: 10px;
 }
