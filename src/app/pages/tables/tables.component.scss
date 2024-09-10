@@ -23,3 +23,12 @@ ngb-modal-backdrop {
 .badge{
     color: black;
 }
+
+.card-footer,
+.card-header{
+    background-color: var(--comColor) !important;
+}
+
+.mb-0{
+    color: var(--textColor) !important;
+}

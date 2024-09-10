@@ -23,6 +23,10 @@
 
     // Navbar brand (logo)
 
+    .nav-item a{
+        color: var(--textColor) !important;
+    }
+
     .navbar-brand {
         font-size: $font-size-sm;
         font-weight: 600;
@@ -74,6 +78,7 @@
                 padding-top: $navbar-nav-link-padding-y;
                 padding-bottom: $navbar-nav-link-padding-y;
                 border-radius: $navbar-nav-link-border-radius;
+                color: aliceblue !important;
 
                 i {
                     margin-right: .625rem;
@@ -122,14 +127,14 @@
         .navbar-transparent {
             .navbar-nav {
                 .nav-link {
-                    color: $navbar-dark-color;
+                    color: white;
 
                     @include hover-focus {
-                        color: $navbar-dark-hover-color;
+                        color: white;
                     }
 
                     &.disabled {
-                        color: $navbar-dark-disabled-color;
+                        color: white;
                     }
                 }
 
@@ -137,7 +142,7 @@
                 .active > .nav-link,
                 .nav-link.show,
                 .nav-link.active {
-                    color: $navbar-dark-active-color;
+                    color: white;
                 }
             }
 

@@ -6,3 +6,12 @@
 .card-translucent {
     background-color: rgba(18, 91, 152, 0.08);
 }
+
+.card{
+    border-color: var(--bgColor) !important;
+    background-color: var(--bgColor) !important;
+}
+
+.card-body{
+    border-radius: 10px !important;
+}
