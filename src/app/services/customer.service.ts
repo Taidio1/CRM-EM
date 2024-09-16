@@ -16,21 +16,21 @@ export class CustomerService {
   }
 
 
-  public updateHero(customer: Customer): Observable<Customer[]> {
+  public updateCustomer(customer: Customer): Observable<Customer[]> {
     return this.http.put<Customer[]>(
       `${environment.apiUrl}/${this.url}`,
       customer
     );
   }
 
-  public createHero(customer: Customer): Observable<Customer[]> {
+  public createCustomer(customer: Customer): Observable<Customer[]> {
     return this.http.post<Customer[]>(
       `${environment.apiUrl}/${this.url}`,
       customer
     );
   }
 
-  public deleteHero(customer: Customer): Observable<Customer[]> {
+  public deleteCustomer(customer: Customer): Observable<Customer[]> {
     return this.http.delete<Customer[]>(
       `${environment.apiUrl}/${this.url}/${customer.id}`
     );

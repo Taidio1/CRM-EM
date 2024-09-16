@@ -21,7 +21,7 @@ import { PopupAddComponent } from 'src/app/components/popup-add/popup-add.compon
   encapsulation: ViewEncapsulation.None,
 })
 export class TablesComponent {
-
+  customerToCreate? : Customer;
   displayedColumns: string[] = ['IMIĘ I NAZWISKO', 'STATUS', 'CEL POBYTU	', 'NR SPRAWY	','DATA ZAK. POB'];
   clickedRows = new Set<Customer>();
 
@@ -122,6 +122,7 @@ export class TablesComponent {
     modalRef.componentInstance.customer = customer;
   }
   addCustomerPopup(): void {
+    this.customerToCreate = new Customer();
     this.modalService.open(PopupAddComponent, { size: 'lg' });
   }
   

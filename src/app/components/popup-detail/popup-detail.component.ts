@@ -12,7 +12,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 })
 export class PopupDetailComponent implements OnInit  {
   @Input() customer: Customer;
-  @Output() heroesUpdated = new EventEmitter<Customer[]>();
+  @Output() customerUpdate = new EventEmitter<Customer[]>();
 
   constructor(private modalService: NgbModal, private customerService: CustomerService) { }
   ngOnInit(): void {
@@ -26,8 +26,8 @@ export class PopupDetailComponent implements OnInit  {
     confirmModal.result.then((result) => {
       if (result) {
         this.customerService
-          .updateHero(customer)
-          .subscribe((customers: Customer[]) => this.heroesUpdated.emit(customers));
+          .updateCustomer(customer)
+          .subscribe((customers: Customer[]) => this.customerUpdate.emit(customers));
         this.modalService.dismissAll();
       }
     });
