@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,24 +30,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "CRMAPI\\Controllers\\CustomerController.cs",
               "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "CRMAPI\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-29T20:07:15.163Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Customer.cs",
               "RelativeDocumentMoniker": "CRMAPI\\Customer.cs",
@@ -80,13 +81,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Program.cs",
               "RelativeDocumentMoniker": "CRMAPI\\Program.cs",
               "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Program.cs",
               "RelativeToolTip": "CRMAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-18T21:04:09.535Z",
               "EditorCaption": ""
