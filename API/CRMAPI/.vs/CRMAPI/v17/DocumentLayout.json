@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\klasy\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\klasy\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\klasy\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\klasy\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\klasy\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|solutionrelative:crmapi\\klasy\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D54C0C79-3B3A-48A1-8FE1-0F9D77C01F79}|CRMAPI\\CRMAPI.csproj|c:\\users\\kkacp\\desktop\\crm-em\\api\\crmapi\\crmapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,35 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "CRMAPI\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "CRMAPI\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T20:07:15.163Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Customer.cs",
-              "RelativeDocumentMoniker": "CRMAPI\\Customer.cs",
-              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Customer.cs",
-              "RelativeToolTip": "CRMAPI\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T11:26:01.134Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -81,40 +70,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Program.cs",
-              "RelativeDocumentMoniker": "CRMAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Program.cs",
-              "RelativeToolTip": "CRMAPI\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAABXAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Services\\IUserService.cs",
+              "RelativeToolTip": "CRMAPI\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T21:04:09.535Z",
+              "WhenOpened": "2024-09-24T12:51:23.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Klasy\\Customer.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Klasy\\Customer.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Klasy\\Customer.cs",
+              "RelativeToolTip": "CRMAPI\\Klasy\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:49:01.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\appsettings.json",
               "RelativeDocumentMoniker": "CRMAPI\\appsettings.json",
               "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\appsettings.json",
               "RelativeToolTip": "CRMAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-15T20:24:53.162Z"
+              "WhenOpened": "2024-09-24T12:35:33.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "CRMAPI\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:12:54.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Services\\UserServices.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Services\\UserServices.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Services\\UserServices.cs",
+              "RelativeToolTip": "CRMAPI\\Services\\UserServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:42:13.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CRMAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:39:09.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Klasy\\UserDto.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Klasy\\UserDto.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Klasy\\UserDto.cs",
+              "RelativeToolTip": "CRMAPI\\Klasy\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:37:38.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Klasy\\User.cs",
+              "RelativeDocumentMoniker": "CRMAPI\\Klasy\\User.cs",
+              "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Klasy\\User.cs",
+              "RelativeToolTip": "CRMAPI\\Klasy\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:34:56.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "CRMAPI\\Data\\DataContext.cs",
               "ToolTip": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\Data\\DataContext.cs",
               "RelativeToolTip": "CRMAPI\\Data\\DataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T20:21:38.64Z"
+              "WhenOpened": "2024-08-15T20:21:38.64Z",
+              "EditorCaption": ""
             }
           ]
         }

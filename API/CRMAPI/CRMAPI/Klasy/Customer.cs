@@ -1,6 +1,6 @@
 using System.Data.SqlTypes;
 
-namespace CRMAPI
+namespace CRMAPI.Klasy
 {
   public class Customer
   {

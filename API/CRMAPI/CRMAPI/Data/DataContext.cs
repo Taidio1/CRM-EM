@@ -1,3 +1,4 @@
+using CRMAPI.Klasy;
 using Microsoft.EntityFrameworkCore;
 
 namespace CRMAPI.Data
@@ -7,5 +8,11 @@ namespace CRMAPI.Data
     public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
     public DbSet<Customer> Customers => Set<Customer>();
+    public DbSet<User> Users { get; set; }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.Entity<User>().HasKey(u => u.Id);
+    }
+
   }
 }
