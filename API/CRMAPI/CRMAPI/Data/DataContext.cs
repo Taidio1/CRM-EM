@@ -9,10 +9,7 @@ namespace CRMAPI.Data
 
     public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<User> Users { get; set; }
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-      modelBuilder.Entity<User>().HasKey(u => u.Id);
-    }
+
 
   }
 }

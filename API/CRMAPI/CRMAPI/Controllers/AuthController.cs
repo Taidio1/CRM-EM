@@ -52,7 +52,6 @@ namespace CRMAPI.Controllers
     [HttpPost("login")]
     public async Task<ActionResult<string>> Login(UserDto request)
     {
-      var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
 
       if (user.Username != request.Username)
       {
