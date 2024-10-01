@@ -53,22 +53,29 @@ namespace CRMAPI.Controllers
     public async Task<ActionResult<string>> Login(UserDto request)
     {
 
-      if (user.Username != request.Username)
+      using (var dbContext = new MyDbContext()) // Tworzymy instancję kontekstu bazy danych
       {
-        return BadRequest("User not found.");
+        var user = dbContext.Users // Pobieramy użytkownika z bazy danych
+            .Where(u => u.Username == request.Username)
+            .FirstOrDefault();
+
+        if (user == null)
+        {
+          return BadRequest("User not found.");
+        }
+
+        if (!VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
+        {
+          return BadRequest("Wrong password.");
+        }
+
+        string token = CreateToken(user);
+
+        var refreshToken = GenerateRefreshToken();
+        SetRefreshToken(refreshToken);
+
+        return Ok(token);
       }
-
-      if (!VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
-      {
-        return BadRequest("Wrong password.");
-      }
-
-      string token = CreateToken(user);
-
-      var refreshToken = GenerateRefreshToken();
-      SetRefreshToken(refreshToken);
-
-      return Ok(token);
     }
 
     [HttpPost("refresh-token")]
