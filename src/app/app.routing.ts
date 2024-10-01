@@ -10,11 +10,11 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   }, 
   {
-    path: '',
+    path: 'dashboard',
     component: AdminLayoutComponent,
     canActivate: [AuthGuard], // Add the AuthGuard to this route
     children: [
@@ -42,9 +42,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
-      useHash: true
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule
   ],
