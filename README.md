@@ -38,10 +38,3 @@ Funkcje
 Przyszły rozwój
 
 Aplikacja CRM została zaprojektowana tak, aby była skalowalna i elastyczna, umożliwiając przyszły rozwój i integrację nowych funkcji i technologii.
-Niektóre potencjalne obszary przyszłego rozwoju obejmują:
-
-- integrację z usługami innych firm, takimi jak media społecznościowe
-- rozwój aplikacji mobilnych umożliwiających dostęp w podróży
-Podsumowanie
-
-Aplikacja CRM to potężne narzędzie do zarządzania relacjami z klientami i napędzania rozwoju firmy. Dzięki solidnym funkcjom, skalowalnej architekturze i przyjaznemu dla użytkownika interfejsowi jest to idealne rozwiązanie dla firm każdej wielkości i z każdej branży.
