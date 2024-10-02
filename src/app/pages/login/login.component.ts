@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   
   username: string;
   password: string;
+  error: string;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -19,12 +20,16 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   login() {
     this.authService.login(this.username, this.password).subscribe((token:string) => {
-      localStorage.setItem('token', token);
-      this.router.navigate(['/dashboard']);
-      console.log(token);
-      // tutaj możesz wykonać akcje po zalogowaniu
+      if (token) {
+        localStorage.setItem('token', token);
+        this.router.navigate(['/dashboard']);
+        console.log(token);
+        // tutaj możesz wykonać akcje po zalogowaniu
+      } else {
+        this.error = 'Błędne Dane';
+      }
     }, error => {
-      console.error(error);
+      this.error = 'Błędne Dane';
     });
   }
 

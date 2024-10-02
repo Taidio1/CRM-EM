@@ -37,8 +37,8 @@ namespace CRMAPI.Controllers
     [HttpGet, Authorize]
     public ActionResult<string> GetMe()
     {
-      var userName = _userService.GetMyName();
-      return Ok(userName);
+      UserDto userData = new UserDto();
+      return Ok(userData);
     }
 
     [HttpPost("register")]
@@ -70,14 +70,11 @@ namespace CRMAPI.Controllers
     public async Task<ActionResult<string>> Login(UserDto request)
     {
       var userRepository = new UserRepository(_context);
-      //var userSchema = new UserDto();
       var user = await userRepository.GetUserByUsername(request.Username);
-      //userSchema.Username = user.Username;
-      //userSchema.Rola = user.Rola;
 
-      if (user.Username == null)
+        if (user == null || string.IsNullOrWhiteSpace(user.Username))
         {
-          return BadRequest("User not found.");
+          return BadRequest("Brak Użytkownika");
         }
 
         if (!VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
