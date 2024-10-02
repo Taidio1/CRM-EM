@@ -1,6 +1,7 @@
 using CRMAPI.Data;
 using CRMAPI.Klasy;
 using CRMAPI.Services;
+using CRMAPI.UserRepo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,11 +9,15 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
+
 
 namespace CRMAPI.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+
+
   public class AuthController : ControllerBase
   {
     public static User user = new User();
@@ -39,12 +44,24 @@ namespace CRMAPI.Controllers
     [HttpPost("register")]
     public async Task<ActionResult<User>> Register(UserDto request)
     {
+      if (string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
+      {
+        return BadRequest("Niepoprawne dane");
+      }
+
       CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
-      user.Username = request.Username;
-      user.PasswordHash = passwordHash;
-      user.PasswordSalt = passwordSalt;
-      user.Role = request.Role;
+      var userRepository = new UserRepository(_context);
+
+      var user = new User
+      {
+        Username = request.Username,
+        PasswordHash = passwordHash,
+        PasswordSalt = passwordSalt,
+        Rola = request.Rola
+      };
+
+      await userRepository.AddUser(user);
 
       return Ok(user);
     }
@@ -52,14 +69,13 @@ namespace CRMAPI.Controllers
     [HttpPost("login")]
     public async Task<ActionResult<string>> Login(UserDto request)
     {
+      var userRepository = new UserRepository(_context);
+      var userSchema = new UserDto();
+      var user = await userRepository.GetUserByUsername(request.Username);
+      userSchema.Username = user.Username;
+      userSchema.Rola = user.Rola;
 
-      using (var dbContext = new MyDbContext()) // Tworzymy instancję kontekstu bazy danych
-      {
-        var user = dbContext.Users // Pobieramy użytkownika z bazy danych
-            .Where(u => u.Username == request.Username)
-            .FirstOrDefault();
-
-        if (user == null)
+      if (user.Username == null)
         {
           return BadRequest("User not found.");
         }
@@ -74,8 +90,8 @@ namespace CRMAPI.Controllers
         var refreshToken = GenerateRefreshToken();
         SetRefreshToken(refreshToken);
 
-        return Ok(token);
-      }
+        return Ok(userSchema);
+      
     }
 
     [HttpPost("refresh-token")]
@@ -128,13 +144,18 @@ namespace CRMAPI.Controllers
     private string CreateToken(User user)
     {
       List<Claim> claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.Role, "Admin")
-            };
+      {
+         new Claim(ClaimTypes.Name, user.Username),
+         new Claim(ClaimTypes.Role, "Admin")
+      };
+      // Generate a random key of at least 512 bits
+      var keyBytes = new byte[64]; // 512 bits
+      using (var rng = RandomNumberGenerator.Create())
+      {
+        rng.GetBytes(keyBytes);
+      }
 
-      var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
-          _configuration.GetSection("AppSettings:Token").Value));
+      var key = new SymmetricSecurityKey(keyBytes);
 
       var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
@@ -161,7 +182,8 @@ namespace CRMAPI.Controllers
     {
       using (var hmac = new HMACSHA512(passwordSalt))
       {
-        var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+        var passwordBytes = Encoding.UTF8.GetBytes(password);
+        var computedHash = hmac.ComputeHash(passwordBytes);
         return computedHash.SequenceEqual(passwordHash);
       }
     }
