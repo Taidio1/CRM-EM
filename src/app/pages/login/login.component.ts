@@ -18,9 +18,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   login() {
-    this.authService.login(this.username, this.password).subscribe(response => {
+    this.authService.login(this.username, this.password).subscribe((token:string) => {
+      localStorage.setItem('token', token);
       this.router.navigate(['/dashboard']);
-      console.log(response);
+      console.log(token);
       // tutaj możesz wykonać akcje po zalogowaniu
     }, error => {
       console.error(error);
