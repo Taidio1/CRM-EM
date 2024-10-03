@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-detail.component';
 import { PopupAddComponent } from 'src/app/components/popup-add/popup-add.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 

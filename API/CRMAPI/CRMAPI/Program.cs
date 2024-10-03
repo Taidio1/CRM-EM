@@ -11,9 +11,7 @@ using CRMAPI.UserRepo;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddHttpContextAccessor();
@@ -30,16 +28,9 @@ builder.Services.AddSwaggerGen(options =>
   options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
 
-builder.Services.AddDbContext<DataContext>(options =>
-{
-  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-builder.Services.AddTransient<UserRepository>();
-
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
+.AddJwtBearer(options =>
+{
       options.TokenValidationParameters = new TokenValidationParameters
       {
         ValidateIssuerSigningKey = true,
@@ -48,7 +39,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidateIssuer = false,
         ValidateAudience = false
       };
-    });
+});
 
 builder.Services.AddCors(options => options.AddPolicy(name: "CustomersOrigins",
   policy =>
@@ -56,6 +47,15 @@ builder.Services.AddCors(options => options.AddPolicy(name: "CustomersOrigins",
     policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
   }
 ));
+
+builder.Services.AddDbContext<DataContext>(options =>
+{
+  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+builder.Services.AddTransient<UserRepository>();
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

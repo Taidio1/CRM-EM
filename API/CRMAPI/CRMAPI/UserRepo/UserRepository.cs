@@ -18,11 +18,6 @@ namespace CRMAPI.UserRepo
       return await _context.Users.ToListAsync();
     }
 
-    public async Task<User> GetUserById(int id)
-    {
-      return await _context.Users.FindAsync(id);
-    }
-
     public async Task AddUser(User user)
     {
       _context.Users.Add(user);
@@ -44,10 +39,11 @@ namespace CRMAPI.UserRepo
         await _context.SaveChangesAsync();
       }
     }
-
     public async Task<User> GetUserByUsername(string username)
     {
-      return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+        return await _context.Users
+            .Where(u => u.Username == username)
+            .FirstOrDefaultAsync();
     }
   }
 }

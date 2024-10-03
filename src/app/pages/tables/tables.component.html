@@ -31,7 +31,7 @@
                 <option value="Planowany">Planowany</option>
               </select>
 
-              <input class="filter search btn form-control-label" type="text" placeholder="Szukaj" [(ngModel)]="searchText">
+              <input class="filter search btn form-control-label" type="text" placeholder="Szukaj" >
             </div>
           </div>
           <div class="table-responsive">
@@ -118,7 +118,7 @@
                   </a>
                 </li>
               </ul>
-              <select class="dropdown-center" [(ngModel)]="pageSize" (ngModelChange)="changePageSize($event)">
+              <select class="dropdown-center"  (ngModelChange)="changePageSize($event)">
                 <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
               </select>
               <span class="pagination-center">{{ currentPage }} of {{ totalPages }}</span>

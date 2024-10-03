@@ -1,7 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { PopupDetailComponent } from './components/popup-detail/popup-detail.com
 import { PopupAddComponent } from './components/popup-add/popup-add.component';
 import { LibModule } from "./components/mode-toggle-btn/lib.module";
 import { PopupEditComponent } from './components/popup-edit/popup-edit.component';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 
 @NgModule({
@@ -42,7 +43,11 @@ import { PopupEditComponent } from './components/popup-edit/popup-edit.component
     PopupAddComponent,
     PopupEditComponent,
   ],
-  providers: [],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

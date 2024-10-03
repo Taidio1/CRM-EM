@@ -37,8 +37,8 @@ namespace CRMAPI.Controllers
     [HttpGet, Authorize]
     public ActionResult<string> GetMe()
     {
-      UserDto userData = new UserDto();
-      return Ok(userData);
+      var userName = _userService.GetMyName();
+      return Ok(userName);
     }
 
     [HttpPost("register")]
@@ -58,7 +58,6 @@ namespace CRMAPI.Controllers
         Username = request.Username,
         PasswordHash = passwordHash,
         PasswordSalt = passwordSalt,
-        Rola = request.Rola
       };
 
       await userRepository.AddUser(user);
@@ -87,8 +86,7 @@ namespace CRMAPI.Controllers
         var refreshToken = GenerateRefreshToken();
         SetRefreshToken(refreshToken);
 
-        return Ok(refreshToken);
-        //return Ok(userSchema);
+        return Ok(token);
       
     }
 
@@ -118,7 +116,7 @@ namespace CRMAPI.Controllers
       var refreshToken = new RefreshToken
       {
         Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
-        Expires = DateTime.Now.AddDays(7),
+        Expires = DateTime.Now.AddDays(3),
         Created = DateTime.Now
       };
 
@@ -146,14 +144,8 @@ namespace CRMAPI.Controllers
          new Claim(ClaimTypes.Name, user.Username),
          new Claim(ClaimTypes.Role, "Admin")
       };
-      // Generate a random key of at least 512 bits
-      var keyBytes = new byte[64]; // 512 bits
-      using (var rng = RandomNumberGenerator.Create())
-      {
-        rng.GetBytes(keyBytes);
-      }
-
-      var key = new SymmetricSecurityKey(keyBytes);
+      var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
+                _configuration.GetSection("AppSettings:Token").Value));
 
       var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 

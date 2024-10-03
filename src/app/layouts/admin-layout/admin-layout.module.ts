@@ -7,13 +7,14 @@ import { ClipboardModule } from 'ngx-clipboard';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
-import { IconsComponent } from '../../pages/icons/icons.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ToastrModule } from 'ngx-toastr';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { DocComponent } from 'src/app/pages/doc/doc.component';
+import { RaportComponent } from 'src/app/pages/raport/raport.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     DashboardComponent,
     UserProfileComponent,
     TablesComponent,
-    IconsComponent,
+    DocComponent,
+    RaportComponent,
   ]
 })
 

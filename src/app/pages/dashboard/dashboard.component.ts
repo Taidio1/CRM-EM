@@ -3,6 +3,7 @@ import Chart from 'chart.js';
 import { Customer } from 'src/app/models/customer';
 import { CusStatChar } from 'src/app/models/cusStatChar';
 import { CustomerService } from 'src/app/services/customer.service';
+import { AuthService } from 'src/app/services/auth.service';
 import {Moment} from 'moment';
 
 // core components
@@ -20,8 +21,9 @@ import {
 })
 
 export class DashboardComponent implements OnInit {
-  constructor(private customerService: CustomerService,  private cdr: ChangeDetectorRef){}
+  constructor(private customerService: CustomerService,  private cdr: ChangeDetectorRef,  private authService: AuthService) { }
 
+  public userName: string;
   public datasets: any;
   public data: any;
   public salesChart;
@@ -49,6 +51,13 @@ export class DashboardComponent implements OnInit {
       .subscribe((result: Customer[]) => {
         this.customers = result;
       });
+
+      
+
+       this.authService.getMe().subscribe((response: any) => {
+         this.userName = response.username; 
+         // Zakładam, że odpowiedź z serwera zawiera pole "name"
+       });
 
       //Chart - Status
       this.customerService

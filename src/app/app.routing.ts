@@ -8,6 +8,9 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { AuthGuard } from './services/auth.guard';
+import { DocComponent } from './pages/doc/doc.component';
+import { RaportComponent } from './pages/raport/raport.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 const routes: Routes =[
   {
@@ -47,6 +50,51 @@ const routes: Routes =[
       {
         path: '',
         component: TablesComponent,
+        canActivate: [AuthGuard]
+      },
+    ]
+  },
+  {
+    path: 'doc',
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'doc'
+      },
+      {
+        path: '',
+        component: DocComponent,
+        canActivate: [AuthGuard]
+      },
+    ]
+  },
+  {
+    path: 'raport',
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'raport'
+      },
+      {
+        path: '',
+        component: RaportComponent,
+        canActivate: [AuthGuard]
+      },
+    ]
+  },
+  {
+    path: 'user-profile',
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'user-profile'
+      },
+      {
+        path: '',
+        component: UserProfileComponent,
         canActivate: [AuthGuard]
       },
     ]
