@@ -22,7 +22,8 @@ import {
 
 export class DashboardComponent implements OnInit {
   constructor(private customerService: CustomerService,  private cdr: ChangeDetectorRef,  private authService: AuthService) { }
-
+  
+  name: string;
   public userName: string;
   public datasets: any;
   public data: any;
@@ -44,6 +45,8 @@ export class DashboardComponent implements OnInit {
   customers: Customer[] = [];
   previousMonthCustomers: number;
   customerCountChange: string;
+
+  
 
   ngOnInit(): void {
     this.customerService

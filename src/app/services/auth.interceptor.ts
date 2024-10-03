@@ -13,7 +13,7 @@ import {
       req: HttpRequest<any>,
       next: HttpHandler
     ): Observable<HttpEvent<any>> {
-      const token = localStorage.getItem('Token');
+      const token = localStorage.getItem('authToken');
   
       if (token) {
         req = req.clone({
