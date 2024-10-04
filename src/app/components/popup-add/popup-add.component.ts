@@ -14,22 +14,18 @@ export class PopupAddComponent implements OnInit {
   @Output() customerCreate = new EventEmitter<Customer[]>();
 
   constructor(private modalService: NgbModal,  private customerService: CustomerService) { }
-
-  createCustomer(customer: Customer){
-    const confirmModal = this.modalService.open(ConfirmModalComponent, { size: 'sm' });
-    confirmModal.componentInstance.message = 'Czy na pewno chcesz zapisać zmiany?';
-    confirmModal.result.then((result) => {
-      if (result) {
-        this.customerService
-        .createCustomer(customer)
-        .subscribe((customers: Customer[]) => this.customerCreate.emit(customers))
-        this.modalService.dismissAll();
-      }
-  });
-}
-
+  
   ngOnInit(): void {
   }
+
+  createCustomer(customer: Customer) {
+    this.customerService
+      .createCustomer(customer)
+      .subscribe((customers: Customer[]) => this.customerCreate.emit(customers));
+  }
+
+
+
 
   closeAddCustomerPopup(): void {
     this.modalService.dismissAll();

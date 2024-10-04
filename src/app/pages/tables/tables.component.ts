@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Customer } from 'src/app/models/customer';
@@ -25,6 +25,7 @@ export class TablesComponent {
   displayedColumns: string[] = ['IMIĘ I NAZWISKO', 'STATUS', 'CEL POBYTU	', 'NR SPRAWY	','DATA ZAK. POB'];
   clickedRows = new Set<Customer>();
 
+  @Output() customerUpdated = new EventEmitter<Customer[]>();
   
   searchText = '';
   /**
@@ -60,6 +61,13 @@ export class TablesComponent {
         this.totalPages = Math.ceil(result.length / this.pageSize); // Oblicz łączną liczbę stron
       });
       this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
+  }
+
+
+  deleteCustomer(customer: Customer) {
+    this.customerServices
+      .deleteCustomer(customer)
+      .subscribe((customer: Customer[]) => this.customerUpdated.emit(customer));
   }
 
   onStatusChange(status: string): void {

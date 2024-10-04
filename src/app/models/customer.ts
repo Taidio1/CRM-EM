@@ -1,6 +1,6 @@
 export class Customer {
     id? : number;
-    name = "";
+    name : string;
     status? : string;
     celPobytu ?: string;
     podLegPob ?: string;
