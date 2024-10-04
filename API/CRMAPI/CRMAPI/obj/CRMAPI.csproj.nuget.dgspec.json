@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj": {}
+    "D:\\Programming\\EasyMove\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj": {
+    "D:\\Programming\\EasyMove\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj",
+        "projectUniqueName": "D:\\Programming\\EasyMove\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj",
         "projectName": "CRMAPI",
-        "projectPath": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj",
+        "projectPath": "D:\\Programming\\EasyMove\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj",
         "packagesPath": "C:\\Users\\kkacp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\obj\\",
+        "outputPath": "D:\\Programming\\EasyMove\\CRM-EM\\API\\CRMAPI\\CRMAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\kkacp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
