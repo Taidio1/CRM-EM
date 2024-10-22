@@ -24,3 +24,22 @@
     display: flex;
     flex-direction: column;
 }
+
+.doc .container .row{
+    margin-bottom: 10px;
+}
+.tblPopDetail{
+    width: 50%;
+    margin-bottom: 10px;
+}
+.tblPopDetail tr{
+    border-bottom: 1px rgba(128, 128, 128, 0.445) solid;
+}
+
+@media only screen and (max-width: 600px) {
+    .tblPopDetail{
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+  }

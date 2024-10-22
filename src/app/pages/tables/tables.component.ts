@@ -68,6 +68,7 @@ export class TablesComponent {
     this.customerServices
       .deleteCustomer(customer)
       .subscribe((customer: Customer[]) => this.customerUpdated.emit(customer));
+      this.ngOnInit()
   }
 
   onStatusChange(status: string): void {

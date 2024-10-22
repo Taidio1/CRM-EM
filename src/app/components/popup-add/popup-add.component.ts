@@ -10,9 +10,9 @@ import { ConfirmModalComponent } from '../popup-detail/popup-detail.component';
   styleUrls: ['./popup-add.component.scss']
 })
 export class PopupAddComponent implements OnInit {
-  @Input() customer: Customer;
+  @Input() customer: Customer = new Customer;
   @Output() customerCreate = new EventEmitter<Customer[]>();
-
+  successMessageVisible: boolean = false; 
   constructor(private modalService: NgbModal,  private customerService: CustomerService) { }
   
   ngOnInit(): void {
@@ -22,10 +22,19 @@ export class PopupAddComponent implements OnInit {
     this.customerService
       .createCustomer(customer)
       .subscribe((customers: Customer[]) => this.customerCreate.emit(customers));
+      this.showSuccessMessage();
+      setTimeout(() => {
+        this.closeAddCustomerPopup();
+      }, 3000);
   }
 
 
-
+  showSuccessMessage(): void {
+    this.successMessageVisible = true; // Ustaw widoczność komunikatu na true
+    setTimeout(() => {
+      this.successMessageVisible = false; // Ustaw widoczność komunikatu na false po 25 sekundach
+    }, 25000);
+  }
 
   closeAddCustomerPopup(): void {
     this.modalService.dismissAll();

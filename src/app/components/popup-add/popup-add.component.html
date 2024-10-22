@@ -5,10 +5,24 @@
           <button type="button" class="btn-close" (click)="closeAddCustomerPopup()" data-bs-dismiss="modal"></button>
         </div>
         <hr>
+        <div *ngIf="successMessageVisible" class="alert alert-success">
+          Klient został dodany pomyślnie!
+        </div>
         <div class="modal-body">
             <div class="form-group">
-              <label for="name">Imię i nazwisko</label>
+              <label for="name">Imię i nazwisko<strong style="color: red;">*</strong></label>
               <input type="text" [(ngModel)]="customer.name" placeholder="name" class="form-control" id="name" placeholder="Wpisz imię i nazwisko">
+            </div>
+            <div class="form-group">
+              <label for="celPobytu">Cel Pobytu<strong style="color: red;">*</strong></label>
+              <select class="form-control" [(ngModel)]="customer.celPobytu" id="celPobytu">
+                <option value="" disabled>Wybierz Cel Pobytu</option>
+                <option value="Aktywny">Praca</option>
+                <option value="Nieaktywny">Nauka</option>
+                <option value="Planowany">Rodzina</option>
+                <option value="Zakończony">Blue Card</option>
+                <option value="Wstrzymany">Firma</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="status">Status</label>
@@ -22,20 +36,34 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="telefon">Telefon</label>
+              <label for="podLegPob">Podstawa Leg. Pobytu</label>
+              <select class="form-control" [(ngModel)]="customer.podLegPob" id="podLegPob">
+                <option value="" disabled>Wybierz Podstawe Leg. Pobytu</option>
+                <option value="Aktywny">Karta Pobytu</option>
+                <option value="Nieaktywny">Wiza Studencka</option>
+                <option value="Planowany">Wiza Pracownicza</option>
+                <option value="Zakończony">Inne</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pochodzenie">Pochodzenie<strong style="color: red;">*</strong></label>
+              <input type="text" class="form-control" [(ngModel)]="customer.krajPoch" id="pochodzenie" placeholder="Pochodzenie">
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefon<strong style="color: red;">*</strong></label>
               <input type="text" class="form-control" [(ngModel)]="customer.telefon" id="telefon" placeholder="Wpisz numer telefonu">
             </div>
             <div class="form-group">
-              <label for="celPobytu">Cel pobytu</label>
-              <input type="text" class="form-control" id="celPobytu" placeholder="Wpisz cel pobytu">
+              <label for="Email">Email</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.email" id="Email" placeholder="Email">
             </div>
             <div class="form-group">
-              <label for="nrSprawy">Nr sprawy</label>
-              <input type="text" class="form-control" id="nrSprawy" placeholder="Wpisz numer sprawy">
+              <label for="DataUro">Data Urodzenia</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.dataUro" id="DataUro" placeholder="Data Urodzenia">
             </div>
             <div class="form-group">
-              <label for="dataZakPob">Data zak. pob</label>
-              <input type="date" class="form-control" id="dataZakPob" placeholder="Wpisz datę zak. pob">
+              <label for="Notatka">Notatka</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.notes" id="Notatka" placeholder="Notatka">
             </div>
         </div>
         <div class="modal-footer">
@@ -43,3 +71,5 @@
           <button type="button" class="btn btn-primary" (click)="createCustomer(customer)">Zapisz</button>
         </div>
       </div>
+
+      

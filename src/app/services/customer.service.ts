@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Customer } from '../models/customer';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
+import { map, pipe } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,16 @@ export class CustomerService {
   private url = "Customer";
   constructor(private http: HttpClient) { }
 
-  public getCustomer() : Observable<Customer[]> {
-    return this.http.get<Customer[]>(`${environment.apiUrl}/${this.url}`);
+  public getCustomer(): Observable<Customer[]> {
+    return this.http.get<Customer[]>(`${environment.apiUrl}/${this.url}`).pipe(
+      map(customers => 
+        customers.filter(customer => 
+          customer.status === 'Aktywny' || 
+          customer.status === 'W trakcie' || 
+          customer.status === 'Planowany'
+        )
+      )
+    );
   }
 
 
@@ -24,9 +33,12 @@ export class CustomerService {
   }
 
   public createCustomer(customer: Customer): Observable<Customer[]> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
     return this.http.post<Customer[]>(
       `${environment.apiUrl}/${this.url}`,
-      customer
+      customer, { headers }
     );
   }
 

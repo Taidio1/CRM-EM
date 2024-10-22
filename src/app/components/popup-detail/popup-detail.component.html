@@ -54,31 +54,62 @@
   <h2>Dok.</h2>
 
   <div class="doc">
-    <table>
-      <tbody>
-      <tr>
-      <td><strong>Data Złożenia Wniosku:</strong></td>
-      <td>{{ customer.dataZloWnio}}</td>
-      </tr>
-      <tr>
-      <td><strong>Data. Wyd. Wniosku:</strong></td>
-      <td>{{ customer.dataWydWnio}}</td>
-      </tr>
-      <tr>
-      <td><strong>Data Odb. Karty:</strong></td>
-      <td>{{ customer.DataOdbKarty}}</td>
-      </tr>
-      <tr>
-      <td><strong>Data Odb Decyzji:</strong></td>
-      <td>{{ customer.DataOdbDec}}</td>
-      </tr>
-      <tr>
-      <td><strong>Data Zak. Leg. Pobytu:</strong></td>
-      <td>{{ customer.DataZakLegPob}}</td>
-      </tr>
-      </tbody>
-      </table>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="label">Data Zak. Leg. Pobytu</div>
+              <div>{{ customer.DataZakLegPob || '--'}}</div>
+          </div>
+          <div class="col-md-6">
+              <div class="label">Data Złożenia Wniosku</div>
+              <div>{{ customer.dataZloWnio || '--'}}</div>
+          </div>
+      </div>
+      <div class="row">
+      <!--Tutaj poprawić--> 
+          <div class="col-md-6">
+              <div class="label" style="color:red">Data Wyd. Decyzji:</div>
+              <div>{{ customer.dataWydWnio || '--'}}</div>
+          </div>
+          <div class="col-md-6">
+              <div class="label">Data Odb. Decyzji:</div>
+              <div>{{ customer.DataOdbDec || '--'}}</div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="label">Data Odb. Karty:</div>
+              <div>{{ customer.DataOdbKarty || '--'}}</div>
+          </div>
+          <div class="col-md-6">
+              <div class="label">Inspektor</div>
+              <div>{{ customer.inspektor || '--'}}</div>
+          </div>
+      </div>
+  </div>
 
+
+
+   
+
+  </div>
+  <div class="input-group mb-2 ">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Numer Sprawy:</span>
+    </div>
+  <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.numerSprawy" placeholder="numerSprawy" />
+  </div>
+  <div class="input-group mb-2 ">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Inspektor:</span>
+    </div>
+  <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.inspektor" placeholder="inspektor" />
+  </div>
+  <div class="input-group mb-2 ">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Data Urodzin:</span>
+    </div>
+  <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataUro" placeholder="Data Urodzin" />
   </div>
     <div class="input-group mb-2 ">
       <div class="input-group-prepend">
@@ -88,21 +119,15 @@
     </div>
     <div class="input-group mb-2 ">
       <div class="input-group-prepend">
-        <span class="input-group-text">Adres:</span>
-      </div>
-    <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.adres" placeholder="Adres" />
-    </div>
-    <div class="input-group mb-2 ">
-      <div class="input-group-prepend">
         <span class="input-group-text">Email:</span>
       </div>
     <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.email" placeholder="Email" />
     </div>
     <div class="input-group mb-2 ">
       <div class="input-group-prepend">
-        <span class="input-group-text">Data Urodzin:</span>
+        <span class="input-group-text">Adres:</span>
       </div>
-    <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataUro" placeholder="Data Urodzin" />
+    <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.adres" placeholder="Adres" />
     </div>
     <div class="input-group mb-2 ">
       <div class="input-group-prepend">
@@ -110,19 +135,7 @@
       </div>
     <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.notes" placeholder="Notes" />
     </div>
-    <div class="input-group mb-2 ">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Numer Sprawy:</span>
-      </div>
-    <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.numerSprawy" placeholder="numerSprawy" />
-    </div>
-    <div class="input-group mb-2 ">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Inspektor:</span>
-      </div>
-    <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.inspektor" placeholder="inspektor" />
-    </div>
-    <div class="input-group mb-2 " *ngIf="customer.Firma !== null">
+    <div class="input-group mb-2 " *ngIf="customer.Firma !== null || ''">
       <div class="input-group-prepend">
         <span class="input-group-text">Firma:</span>
       </div>

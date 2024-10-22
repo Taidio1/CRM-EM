@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kuQWBnJlnVg=",
+  "dgSpecHash": "7dtGRiFhccI=",
   "success": true,
-  "projectFilePath": "D:\\Programming\\EasyMove\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj",
+  "projectFilePath": "C:\\Users\\kkacp\\Desktop\\CRM-EM\\API\\CRMAPI\\CRMAPI\\CRMAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kkacp\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\kkacp\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
