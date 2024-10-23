@@ -1,4 +1,5 @@
 export class CusStatChar {
     purpose? : string;
-    count? : Int32Array;
+    count? : number;
+  percentage: number;
 }

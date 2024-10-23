@@ -33,12 +33,9 @@ export class CustomerService {
   }
 
   public createCustomer(customer: Customer): Observable<Customer[]> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
     return this.http.post<Customer[]>(
       `${environment.apiUrl}/${this.url}`,
-      customer, { headers }
+      customer
     );
   }
 

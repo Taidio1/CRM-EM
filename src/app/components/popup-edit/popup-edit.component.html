@@ -1,112 +1,129 @@
-<!-- <div *ngIf="customer" tabindex="1" class="model modal-content" role="document" aria-hidden="true">
+<div *ngIf="customer" tabindex="1" class="model modal-content" role="document" aria-hidden="true">
     <div class="modal-header">
-      <h2 class="modal-title">Szczegóły klienta</h2>
+      <h2 class="modal-title">Edytuj Dane Klienta</h2>
       <button type="button" class="close" aria-label="Close" (click)="dismiss()">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body" style="color: black;" >
       <div class="input-group mb-2 ">
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.name" placeholder="Name" readonly />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.name" />
       </div>
       <div class="input-group mb-2 ">
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.krajPoch" placeholder="Kraj Pochodzenia" />
+        <div class="input-group-prepend">
+          <span class="input-group-text">Kraj Pochodzenia:</span>
+        </div>
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.krajPoch" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Status:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.status" placeholder="Status" />
+        <select [(ngModel)]="customer.status" class="custom-select">
+          <option  selected>{{customer.status}}</option>
+          <option value="Aktywny">Aktywny</option>
+          <option value="W trakcie">W trakcie</option>
+          <option value="Planowany">Planowany</option>
+          <option value="Zakończony">Zakończony</option>
+        </select>
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Cel Pobytu:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.celPobytu" placeholder="Cel Pobytu" />
+        <select [(ngModel)]="customer.celPobytu" class="custom-select">
+          <option  selected>{{customer.celPobytu}}</option>
+          <option value="Nauka">Nauka</option>
+          <option value="Praca">Praca</option>
+          <option value="Rodzina">Rodzina</option>
+          <option value="Rodzina">Blue Card</option>
+          <option value="Firma">Firma</option>
+          <option value="Rezydent">Rezydent</option>
+        </select>
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Pod. Leg. Pobytu:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.podLegPob" placeholder="Pod. Leg. Pobytu" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.podLegPob" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Telefon:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.telefon" placeholder="Telefon" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.telefon" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Adres:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.adres" placeholder="Adres" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.adres" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Data Zlożenia Wniosku:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataZloWnio" placeholder="Data Zlożenia Wniosku" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataZloWnio" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Email:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.email" placeholder="Email" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.email" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Data Urodzin:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataUro" placeholder="Data Urodzin" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataUro" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Notes:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.notes" placeholder="Notes" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.notes" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Numer Sprawy:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.numerSprawy" placeholder="numerSprawy" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.numerSprawy" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Inspektor:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.inspektor" placeholder="inspektor" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.inspektor" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Data Wyd. Wniosku:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataWydWnio" placeholder="Data Wyd. Wniosku" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.dataWydWnio" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Data Odb. Karty Pob.:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.DataOdbKarty" placeholder="Data Odb. Karty Pob.:" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.DataOdbKarty" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Data Odb. Decyzji:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.DataOdbDec" placeholder="Data Odb. Decyzji" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.DataOdbDec" />
       </div>
       <div class="input-group mb-2 ">
         <div class="input-group-prepend">
           <span class="input-group-text">Data Zak. Leg. Pobytu:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.DataZakLegPob" placeholder="Data Zak. Leg. Pobytu" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.DataZakLegPob" />
       </div>
       <div class="input-group mb-2 " *ngIf="customer.Firma !== null">
         <div class="input-group-prepend">
           <span class="input-group-text">Firma:</span>
         </div>
-      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.Firma" placeholder="Firma" />
+      <input style="color: black;" type="text" class="form-control" [(ngModel)]="customer.Firma" />
       </div>
   
   
@@ -116,4 +133,4 @@
       <button type="button" class="btn btn-secondary" (click)="dismiss()">Zamknij</button>
       <button type="button" class="btn btn-secondary" (click)="updateCustomer(customer)" *ngIf="customer.id">Zapisz</button>
     </div>
-  </div> -->
+  </div>

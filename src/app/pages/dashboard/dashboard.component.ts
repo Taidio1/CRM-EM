@@ -70,6 +70,7 @@ export class DashboardComponent implements OnInit {
         const counts = result.map(el=> el.count)
         this.chartsStatsData.labels = labels 
         this.chartsStatsData.datasets[0].data = counts
+        this.customerStats = result;
       });
 
     this.datasets = [

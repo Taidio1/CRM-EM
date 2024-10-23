@@ -8,6 +8,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PopupDetailComponent } from 'src/app/components/popup-detail/popup-detail.component';
 import { PopupAddComponent } from 'src/app/components/popup-add/popup-add.component';
 import { FormsModule } from '@angular/forms';
+import { PopupEditComponent } from 'src/app/components/popup-edit/popup-edit.component';
 
 
 
@@ -130,6 +131,13 @@ export class TablesComponent {
     const modalRef = this.modalService.open(PopupDetailComponent, { size: 'lg' });
     modalRef.componentInstance.customer = customer;
   }
+
+  openEdit(customer: any): void {
+    const modalRef = this.modalService.open(PopupEditComponent, { size: 'lg' });
+    modalRef.componentInstance.customer = customer;
+  }
+
+
   addCustomerPopup(): void {
     this.customerToCreate = new Customer();
     this.modalService.open(PopupAddComponent, { size: 'lg' });
